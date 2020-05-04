@@ -1,0 +1,2 @@
+# Assign sources to types
+

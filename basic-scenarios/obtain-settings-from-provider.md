@@ -1,0 +1,2 @@
+# Obtain settings from provider
+
