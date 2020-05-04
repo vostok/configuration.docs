@@ -1,2 +1,2 @@
-# Use source templating
+# Use value substitutions
 

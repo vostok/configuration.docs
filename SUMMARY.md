@@ -57,7 +57,7 @@
   * [Make settings required](basic-scenarios/make-settings-required.md)
 * [Advanced scenarios](advanced-scenarios/README.md)
   * [Use name aliases](advanced-scenarios/use-name-aliases.md)
-  * [Use source templating](advanced-scenarios/use-source-templating.md)
+  * [Use value substitutions](advanced-scenarios/use-source-templating.md)
   * [Use dynamic interfaces](advanced-scenarios/use-dynamic-interfaces.md)
   * [Use shared provider instance](advanced-scenarios/use-shared-provider-instance.md)
   * [Nest sources](advanced-scenarios/nest-sources.md)
