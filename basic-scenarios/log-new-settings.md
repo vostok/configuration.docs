@@ -1,2 +1,2 @@
-# Log new settings
+# Log settings updates
 
