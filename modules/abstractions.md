@@ -22,7 +22,7 @@ cm ref add vostok.configuration.abstractions <path-to-project>
 
 ### Related pages
 
-{% page-ref page="../concepts-and-basics/settings-nodes.md" %}
+{% page-ref page="../concepts-and-basics/settings-nodes/" %}
 
 {% page-ref page="../concepts-and-basics/settings-nodes-merging.md" %}
 
