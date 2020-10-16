@@ -1,4 +1,49 @@
 # Primitives
 
-TODO: do not forget to mention `ISettingsNode` here.
+### Supported types
+
+| Type | Allowed format examples |
+| :--- | :--- |
+| `string` | Literally any string. |
+| `char` | Literally any single character. |
+| `bool` | `true`, `True`, `TRUE` |
+| `byte, sbyte` | Anything built-in `TryParse` method can grok. |
+| `short, ushort` | Anything built-in `TryParse` method can grok. |
+| `int, uint` | Anything built-in `TryParse` method can grok. |
+| `long, ulong` | Anything built-in `TryParse` method can grok. |
+| `float, double, decimal` | `1.23`, `1,23`, `5,12e2` |
+| `Guid` | Anything built-in `TryParse` method can grok. |
+| `Uri` | `http://example.com`, `example.com/some`, `/part/of/path` |
+| `TimeSpan` | `00:12:34`, `2 seconds`, `500 ms`, `1.5 days`, `10s`, `0.5 minutes` |
+| `DateTime(Offset)` | `2018-03-14 15:09:26.535`, `20050809T181142+0330` |
+| `IPAddress` | `127.0.0.1`, `2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d` |
+| `IPEndPoint` | `192.168.1.10:80` |
+| [`DataSize`](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataSize.cs)\`\` | `453453` \(just bytes\), `1 kb`, `24.3 megabytes`, `500 TB` |
+| [`DataRate`](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataRate.cs)\`\` | `500` \(just bytes/sec\), `200 kilobytes/second`, `5 GB/sec`, `80 mb/s` |
+| `Encoding` | `utf-8`, `us-ascii` |
+
+[DataSize](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataSize.cs) and [DataRate](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataRate.cs) are custom new types. They also provide factory extensions and operators:
+
+```text
+var size = 50.Megabytes();
+var speed = size / 2.Seconds();
+```
+
+
+
+### Node requirements
+
+TODO
+
+
+
+### Null node handling
+
+TODO
+
+
+
+### Related pages
+
+{% page-ref page="parse-method-convention.md" %}
 

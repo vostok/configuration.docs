@@ -6,14 +6,14 @@ Its primary use is to [combine configuration sources](../basic-scenarios/combine
 
 ### API
 
-Each node type implements a `Merge` method that accept another node \(`right` in our terms\) and an instance of settings merge options with following properties:
+Each node type implements a `Merge` method that accept another node \(`right` in our terms\) and an instance of merge options with following properties:
 
 | Property | Values | Description |
 | :--- | :--- | :--- |
-| `ObjectMergeStyle` | `Deep`, `Shallow` | Type of the merge procedure performed on two [object nodes](settings-nodes/object-nodes.md). `Deep` is the default style. |
-| `ArrayMergeStyle` | `Replace`, `Concat`, `Union`, `PerElement` | Type of the merge procedure performed on two [array nodes](settings-nodes/array-nodes.md). `Replace` is the default style. |
+| `ObjectMergeStyle` | `Deep`, `Shallow` | Type of the merge procedure performed on [object nodes](settings-nodes/object-nodes.md). `Deep` is the default style. |
+| `ArrayMergeStyle` | `Replace`, `Concat`, `Union`, `PerElement` | Type of the merge procedure performed on [array nodes](settings-nodes/array-nodes.md). `Replace` is the default style. |
 
-[SettingsNodeMerger](https://github.com/vostok/configuration.abstractions/blob/master/Vostok.Configuration.Abstractions/SettingsTree/SettingsNodeMerger.cs) is a handy public helper used to merge arbitrary nodes:
+[SettingsNodeMerger](https://github.com/vostok/configuration.abstractions/blob/master/Vostok.Configuration.Abstractions/SettingsTree/SettingsNodeMerger.cs) is a handy public helper used to merge arbitrary nodes that handles nulls:
 
 ```text
 var result = SettingsNodeMerger.Merge(left, right, SettingsMergeOptions.Default);
@@ -43,7 +43,7 @@ Right node always wins: `left value + right value --> right value`.
 
 **Concat** style ****produces an array containing elements from both arrays. All elements from the left array, then all elements from the second one, preserving order inside arrays.
 
-`[1, 2] + [3, 4] --> [1, 2, 3, 4]`
+`[1, 2] + [2, 3] --> [1, 2, 2, 3]`
 
 **Union** style ****produces an array containing unique items from both arrays. The order is the same to **Concat** style.
 

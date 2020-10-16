@@ -8,7 +8,7 @@ Scoping is used to map object fields/properties to nodes of settings tree during
 
 ### Examples
 
-* `{A: 1}` scoped to `a` is just a value `1`.
+* `{A: 1}` scoped to `a` is just a value of `1`.
 * `{A: 1}` scoped to `b` is `null`. 
 * `{A: {B: [1, 2]}}` scoped to `A` is `{B: [1, 2]}`
 * `{A: {B: [1, 2]}}` scoped to `[A, B]` is `[1, 2]`
