@@ -23,6 +23,8 @@ Primitive types are parsed from string values in [value nodes](../concepts-and-b
 | [`DataSize`](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataSize.cs)\`\` | `453453` \(just bytes\), `1 kb`, `24.3 megabytes`, `500 TB` |
 | [`DataRate`](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataRate.cs)\`\` | `500` \(just bytes/sec\), `200 kilobytes/second`, `5 GB/sec`, `80 mb/s` |
 | `Encoding` | `utf-8`, `us-ascii` |
+| `Enum` types | Anything built-in `TryParse` method can grok. |
+| Nullable structs | A valid value or `null`. |
 
 [DataSize](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataSize.cs) and [DataRate](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataRate.cs) are custom new types. They also provide factory extensions and operators:
 
@@ -33,7 +35,7 @@ DataRate rate = size / 2.Seconds();
 
 ### Parse method convention
 
-There's also support for any types that implement `Parse` or `TryParse` method with standard signature:
+There's also support for types that implement `Parse` or `TryParse` method with standard signature:
 
 ```text
 class/struct T 
@@ -58,7 +60,7 @@ Explicitly specified `null` string value has the same effect.
 
 ### Incorrect format handling
 
-Parser errors arising from incorrect value formats lead to binder failure and result in exceptions, even for optional members \(see [classes and structs](classes-and-structs.md) for more context\).
+Parsing errors arising from incorrect value formats lead to binder failure and result in exceptions, even for optional members \(see [classes and structs](classes-and-structs.md) for more context\).
 
 ### Related pages
 

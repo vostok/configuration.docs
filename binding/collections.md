@@ -23,6 +23,8 @@ Sets:
 * `HashSet<T>`
 * `ISet<T>` \(backed by `HashSet`\)
 
+Collections can have [classes, structs](classes-and-structs.md) and other collections as elements.
+
 ### Binder requirements
 
 Collections require binders defined for element types \(both keys and values in case of dictionaries\).

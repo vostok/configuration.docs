@@ -8,7 +8,7 @@ The resulting model is queried by the application code with a [configuration pro
 
 ### Binders
 
-Binding is implemented by a set of [_binders_](../binding/), each of which knows how to convert a [settings node](settings-nodes/) to an object of a specific type. 
+Binding is implemented by a set of [binders](../binding/), each of which knows how to convert a [settings node](settings-nodes/) to an object of a specific type. 
 
 Binders are composable: if there's a registered binder for `Dictionary<T1, T2>` \(depending on binders for `T1` and `T2`\), `string` and `int`, then it's possible to bind to `Dictionary<string, int>`. This is heavily used for [collections](../binding/collections.md).
 
@@ -61,6 +61,12 @@ Node --> AppSettings via ClassStructBinder
 ```
 
 See all [binders descriptions](../binding/) to learn more about this process.
+
+### Error handling
+
+Binding fails if there's been at least one error on any level. Errors may arise from incorrect value formats for [primitives](../binding/primitives.md), missing values for [required](../basic-scenarios/make-settings-required.md) fields and properties, mismatches of [settings node](settings-nodes/) types or missing [binders](../binding/) for requested types.
+
+In case of failure, a complete list of all errors is presented in resulting exception. 
 
 ### Related pages
 
