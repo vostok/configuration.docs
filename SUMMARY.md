@@ -28,7 +28,7 @@
   * [Logging](modules/logging.md)
   * [Microsoft](modules/microsoft.md)
 * [Sources](sources/README.md)
-  * [Constant source](sources/constant-source.md)
+  * [Constant sources](sources/constant-source.md)
   * [Object source](sources/object-source.md)
   * [XML sources](sources/xml-sources.md)
   * [YAML sources](sources/yaml-sources.md)
@@ -64,6 +64,7 @@
   * [Create custom sources](advanced-scenarios/create-custom-sources.md)
   * [Apply custom validators](advanced-scenarios/apply-custom-validators.md)
   * [Apply custom binders](advanced-scenarios/apply-custom-binders.md)
+  * [Print contents of a source](advanced-scenarios/print-contents-of-a-source.md)
 * [Integrations](integrations/README.md)
   * [Microsoft configuration extensions](integrations/microsoft-configuration-extensions.md)
 
