@@ -56,6 +56,10 @@ Default type value is used unless [explictly required](../basic-scenarios/make-s
 
 Explicitly specified `null` string value has the same effect.
 
+### Incorrect format handling
+
+Parser errors arising from incorrect value formats lead to binder failure and result in exceptions, even for optional members \(see [classes and structs](classes-and-structs.md) for more context\).
+
 ### Related pages
 
 {% page-ref page="../concepts-and-basics/binding-nodes-to-models.md" %}

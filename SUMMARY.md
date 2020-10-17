@@ -41,7 +41,7 @@
   * [Primitives](binding/primitives.md)
   * [Collections](binding/collections.md)
   * [Classes and structs](binding/classes-and-structs.md)
-  * [Constructors](binding/constructors.md)
+  * [Constructor wrappers](binding/constructors.md)
   * [Enums](binding/enums.md)
   * [Nullables](binding/nullables.md)
   * [Tuples](binding/tuples.md)

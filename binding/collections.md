@@ -37,7 +37,17 @@ An empty collection is returned unless [explictly required](../basic-scenarios/m
 
 Nulls are not valid as dictionary keys.
 
+### Error handling
+
+Any element binding failure results in complete collection binding failure.
+
+### Comparer customization
+
+A custom element comparer \(such as `StringComparer.OrdinalIgnoreCase` for case-insensitive dictionary keys\) can be achieved by wrapping the collection in a custom type and utilizing the [constructor binding convention](constructors.md).
+
 ### Related pages
 
 {% page-ref page="../concepts-and-basics/binding-nodes-to-models.md" %}
+
+{% page-ref page="constructors.md" %}
 

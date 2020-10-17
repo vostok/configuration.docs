@@ -8,9 +8,22 @@ Fields and properties don't have to be mutable: readonly fields and properties w
 
 Following members are **ignored**: indexers, constants, static and non-public fields and properties, computed properties without backing fields.
 
+Nested classes and [collections](collections.md) are supported without restrictions.
+
 ### Settings tree navigation
 
 When binding a field or property value, the settings tree is [scoped](../concepts-and-basics/settings-nodes-scoping.md) to the member name. This imposes a requirement to synchronize naming in configuration data provided by [sources](../concepts-and-basics/configuration-sources.md) and models in the application code. In order to bind a model property named `Timeout` from a section of JSON file, this section must contain a property with the same name \(barring case\).
+
+```text
+Model                             JSON data source
+
+class Settings                    {
+{
+    TimeSpan Timeout { get; } -------> "timeout": "2 seconds",
+    
+    int Parallelism { get; }  -------> "parallelism": 32
+}                                 }
+```
 
 [Name aliases](../advanced-scenarios/use-name-aliases.md) allow to decouple property names from configuration data names.
 
