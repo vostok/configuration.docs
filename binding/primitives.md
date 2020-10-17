@@ -1,5 +1,7 @@
 # Primitives
 
+Primitive types are parsed from string values in [value nodes](../concepts-and-basics/settings-nodes/value-nodes.md).
+
 ### Supported types
 
 | Type | Allowed format examples |
@@ -25,25 +27,36 @@
 [DataSize](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataSize.cs) and [DataRate](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataRate.cs) are custom new types. They also provide factory extensions and operators:
 
 ```text
-var size = 50.Megabytes();
-var speed = size / 2.Seconds();
+DataSize size = 50.Megabytes();
+DataRate rate = size / 2.Seconds();
 ```
 
+### Parse method convention
 
+There's also support for any types that implement `Parse` or `TryParse` method with standard signature:
+
+```text
+class/struct T 
+{
+    T Parse(string input);
+    
+    bool TryParse(string input, out T result)
+}
+```
+
+This allows to use arbitrary types with string representation without resorting to [implementation of custom binders](../advanced-scenarios/apply-custom-binders.md).
 
 ### Node requirements
 
-TODO
-
-
+[Value node](../concepts-and-basics/settings-nodes/value-nodes.md) or a container \(array/object\) node with a single value node child.
 
 ### Null node handling
 
-TODO
+Default type value is used unless [explictly required](../basic-scenarios/make-settings-required.md).
 
-
+Explicitly specified `null` string value has the same effect.
 
 ### Related pages
 
-{% page-ref page="parse-method-convention.md" %}
+{% page-ref page="../concepts-and-basics/binding-nodes-to-models.md" %}
 
