@@ -2,7 +2,7 @@
 
 **Requires**: [main sources module](../modules/sources.md).
 
-Multiple configuration sources can be combined in order to produce a single composite source whose data is produced by [merging](../concepts-and-basics/settings-nodes-merging.md) the [settings trees](../concepts-and-basics/settings-nodes/) provided by original sources. 
+Multiple configuration sources can be combined into a single composite source whose data is produced by [merging](../concepts-and-basics/settings-nodes-merging.md) the [settings trees](../concepts-and-basics/settings-nodes/) provided by original sources. 
 
 ```text
 var source1 = new JsonStringSource(...);
