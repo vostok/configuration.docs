@@ -18,3 +18,7 @@ throttling__capacity=50 --> { "throttling": { "capacity": "50" } }
 
 This source is static and never issues data updates.
 
+### Related pages
+
+{% page-ref page="../concepts-and-basics/configuration-sources.md" %}
+

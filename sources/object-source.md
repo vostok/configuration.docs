@@ -1,6 +1,6 @@
 # Object source
 
-**Location**: [main sources module](../modules/sources.md).
+**Location**: [sources module](../modules/sources.md).
 
 [**ObjectSource**](https://github.com/vostok/configuration.sources/blob/master/Vostok.Configuration.Sources/Object/ObjectSource.cs) converts an arbitrary object \(including anonymous ones\) to a [settings node](../concepts-and-basics/settings-nodes/):
 

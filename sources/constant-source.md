@@ -1,6 +1,6 @@
 # Constant sources
 
-**Location**: [main sources module](../modules/sources.md).
+**Location**: [sources module](../modules/sources.md).
 
 ### [ConstantSource](https://github.com/vostok/configuration.sources/blob/master/Vostok.Configuration.Sources/Constant/ConstantSource.cs)
 
