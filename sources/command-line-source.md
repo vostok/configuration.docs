@@ -31,7 +31,7 @@ Multiple occurrences of the same key are merged into arrays.
 
 This source is static and never issues data updates.
 
-### Defaults
+### Default keys and values
 
 Standalone keys may be optionally supplied with a default value.
 

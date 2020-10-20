@@ -16,7 +16,7 @@ Sources must never block indefinitely while waiting for data and should rather p
 
 Sources must be thread-safe and should be designed to support multiple concurrent observers. It is also expected that every new observer would immediately receive a notification with current state upon subscription.
 
-Here are some of the often used source implementations:
+Here are some popular source implementations:
 
 * [JSON source](../sources/json-sources.md)
 * [ClusterConfig source](../sources/clusterconfig-source.md)

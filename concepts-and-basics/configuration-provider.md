@@ -8,8 +8,6 @@
 
 #### Get method
 
-_For more info, visit the_ [_obtain settings from provider_](../basic-scenarios/obtain-settings-from-provider.md) _page_.
-
 Fetches the newest version of settings of given type:
 
 ```text
@@ -18,19 +16,17 @@ var settings = provider.Get<MySettings>();
 
 #### Observe method
 
-_For more info, visit the_ [_observe settings via provider_](../basic-scenarios/observe-settings-via-provider.md) _page._
-
 Allows to subscribe for updates of settings of given type:
 
 ```text
 provider.Observe<MySettings>.Subscribe(newSettings => {});
 ```
 
-#### Method types
+#### Method variants
 
 Both **Get** and **Observe** methods have 2 variations:
 
-* The one without any parameters requires a prior [assignment](../basic-scenarios/assign-sources-to-types.md) of source to the requested type;
+* The one without any parameters requires a prior [assignment](../basic-scenarios/assign-sources-to-types.md) of a source to the requested type;
 * The one with a [source](configuration-sources.md) parameter requires no such assignment \(but check out [caching](caching-and-performance.md) for gotchas\);
 
 ### Related pages
