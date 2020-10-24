@@ -1,5 +1,7 @@
 # Primitives
 
+Primitive types are parsed from string values in [value nodes](../concepts-and-basics/settings-nodes/value-nodes.md).
+
 ### Supported types
 
 | Type | Allowed format examples |
@@ -21,29 +23,46 @@
 | [`DataSize`](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataSize.cs)\`\` | `453453` \(just bytes\), `1 kb`, `24.3 megabytes`, `500 TB` |
 | [`DataRate`](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataRate.cs)\`\` | `500` \(just bytes/sec\), `200 kilobytes/second`, `5 GB/sec`, `80 mb/s` |
 | `Encoding` | `utf-8`, `us-ascii` |
+| `Enum` types | Anything built-in `TryParse` method can grok. |
+| Nullable structs | A valid value or `null`. |
 
 [DataSize](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataSize.cs) and [DataRate](https://github.com/vostok/configuration/blob/master/Vostok.Configuration/Primitives/DataRate.cs) are custom new types. They also provide factory extensions and operators:
 
 ```text
-var size = 50.Megabytes();
-var speed = size / 2.Seconds();
+DataSize size = 50.Megabytes();
+DataRate rate = size / 2.Seconds();
 ```
 
+### Parse method convention
 
+There's also support for types that implement `Parse` or `TryParse` method with standard signature:
+
+```text
+class/struct T 
+{
+    T Parse(string input);
+    
+    bool TryParse(string input, out T result)
+}
+```
+
+This allows to use arbitrary types with string representation without resorting to [implementation of custom binders](../advanced-scenarios/apply-custom-binders.md).
 
 ### Node requirements
 
-TODO
-
-
+[Value node](../concepts-and-basics/settings-nodes/value-nodes.md) or a container \(array/object\) node with a single value node child.
 
 ### Null node handling
 
-TODO
+Default value for the type is used unless [explictly required](../basic-scenarios/make-settings-required.md).
 
+Explicitly specified `null` string value has the same effect.
 
+### Incorrect format handling
+
+Parsing errors arising from incorrect value formats lead to binder failure and result in exceptions, even for optional members \(see [classes and structs](classes-and-structs.md) for more context\).
 
 ### Related pages
 
-{% page-ref page="parse-method-convention.md" %}
+{% page-ref page="../concepts-and-basics/binding-nodes-to-models.md" %}
 

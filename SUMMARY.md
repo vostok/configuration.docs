@@ -2,7 +2,6 @@
 
 * [Home](README.md)
 * [Quickstart](quickstart.md)
-* [Guarantees](guarantees.md)
 * [Concepts and basics](concepts-and-basics/README.md)
   * [Settings nodes](concepts-and-basics/settings-nodes/README.md)
     * [Value nodes](concepts-and-basics/settings-nodes/value-nodes.md)
@@ -15,7 +14,6 @@
   * [Configuration provider](concepts-and-basics/configuration-provider.md)
   * [Caching and performance](concepts-and-basics/caching-and-performance.md)
   * [Error handling](concepts-and-basics/error-handling.md)
-  * [Best usage practices](concepts-and-basics/best-usage-practices.md)
 * [Modules](modules/README.md)
   * [Abstractions](modules/abstractions.md)
   * [Configuration](modules/configuration.md)
