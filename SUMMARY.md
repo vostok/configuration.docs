@@ -63,6 +63,4 @@
   * [Apply custom validators](advanced-scenarios/apply-custom-validators.md)
   * [Apply custom binders](advanced-scenarios/apply-custom-binders.md)
   * [Print contents of a source](advanced-scenarios/print-contents-of-a-source.md)
-* [Integrations](integrations/README.md)
-  * [Microsoft configuration extensions](integrations/microsoft-configuration-extensions.md)
 

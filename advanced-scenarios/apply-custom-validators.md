@@ -2,7 +2,7 @@
 
 **Requires**: [abstractions module](../modules/abstractions.md).
 
-Validation feature allows to associate a custom user-made validator to a settings type. Validation occurs during [binding](../concepts-and-basics/binding-nodes-to-models.md) and results in binding errors for incorrect settings.
+Validation feature allows to associate a custom user-made validator with a settings type. Validation occurs during [binding](../concepts-and-basics/binding-nodes-to-models.md) and results in binding errors for incorrect settings.
 
 ```text
 [ValidateBy(typeof(MySettingsValidator))]

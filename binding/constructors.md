@@ -1,6 +1,6 @@
 # Constructor injection
 
-If a type has exactly one constructor with a single argument of a type that can be bound, then it can also be bound with argument injection. This is especially useful for [collections](collections.md) customization:
+A type that has exactly one constructor with a single argument of a type that can be bound can also be bound with argument injection. This is especially useful for [collection](collections.md) customization:
 
 ```text
 class PerServiceSettings : Dictionary<string, string>

@@ -24,7 +24,7 @@ It's allowed to assign multiple aliases to a single member:
 public TimeSpan Timeout { get; }
 ```
 
-**Aliases cannot handle ambiguity**. If the source returns data with more than one of the lookup keys assigned to a field or property, binding fails with an error.
+**Aliases do not handle ambiguity**. If the source returns data with more than one of the lookup keys assigned to a field or property, binding fails with an error.
 
 ```text
 Ambiguous data examples:

@@ -2,7 +2,7 @@
 
 **Requires**: [sources module](../modules/sources.md).
 
-This operation allows to modify underlying source's content by applying a custom delegate. Most often this involves rewriting the values stored in [value nodes](../concepts-and-basics/settings-nodes/value-nodes.md):
+This operation allows to modify source contents by applying a custom delegate. Most often this involves rewriting values stored in [value nodes](../concepts-and-basics/settings-nodes/value-nodes.md):
 
 ```text
 class MyTransformer : ValueNodeTransformer

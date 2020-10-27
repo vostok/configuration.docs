@@ -23,7 +23,7 @@ var settings = provider.Get<MySettings>(new JsonFileSource("settings.json"));
   * Call **Get** on every settings access for "hot" configuration;
   * Call **Get** once and cache the result for "cold" configuration;
 
-* First call for a type may block or [throw exceptions](../concepts-and-basics/error-handling.md) due to source latency, data unavailability or incorrect data format. This behavior continues until a data update remedies the error;
+* First call for a type may block or [throw exceptions](../concepts-and-basics/error-handling.md) due to source latency, data unavailability or incorrect data format. This behavior persists until a data update remedies the error;
 
 * Once warmed up, subsequent calls never block or throw errors and are extremely cheap due to [caching](../concepts-and-basics/caching-and-performance.md). Future errors are not propagated to the calling code, but [can be logged](log-errors.md). **Get** calls return the last seen correct settings object;
 

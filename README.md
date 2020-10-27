@@ -36,7 +36,7 @@ Vostok.Configuration is a [set](modules/) of libraries offering configuration to
 
 * Sources can be [combined](basic-scenarios/combine-sources.md), [navigated](basic-scenarios/scope-sources.md) and [transformed](advanced-scenarios/transform-sources.md);
 
-* [Integration](integrations/microsoft-configuration-extensions.md) with Microsoft configuration system;
+* [Integration]() with Microsoft configuration system;
 
 ## Guarantees
 

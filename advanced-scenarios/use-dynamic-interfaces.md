@@ -2,7 +2,7 @@
 
 **Requires**: [main module](../modules/configuration.md).
 
-The basic recommended way to get most up-to-date settings in the presence of background updates is to use [provider](../concepts-and-basics/configuration-provider.md)'s **Get** method \(see the [relevant scenario](../basic-scenarios/obtain-settings-from-provider.md)\) on each access attempt. However, it's also possible to obtain an inherently dynamic settings model whose properties are updated under the hood. This requires to use an interface as the settings model:
+The basic recommended way to get most up-to-date settings in the presence of background updates is to use [provider](../concepts-and-basics/configuration-provider.md)'s **Get** method \(see the [relevant scenario](../basic-scenarios/obtain-settings-from-provider.md)\) on each access attempt. However, it's also possible to obtain an inherently dynamic settings object whose properties are updated under the hood. This requires to use an interface as the settings model:
 
 ```text
 interface IMySettings

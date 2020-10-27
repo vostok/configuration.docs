@@ -20,9 +20,5 @@ Install-Package Vostok.Configuration.Microsoft
 cm ref add vostok.configuration.microsoft <path-to-project>
 ```
 
-### Related pages
-
-{% page-ref page="../integrations/microsoft-configuration-extensions.md" %}
-
 
 

@@ -2,7 +2,7 @@
 
 **Requires**: [sources module](../modules/sources.md).
 
-Source module offers a coupe of base classes to assist in implementing custom [configuration sources](../concepts-and-basics/configuration-sources.md).
+[Sources module](../modules/sources.md) offers a couple of base classes to assist in implementing custom [configuration sources](../concepts-and-basics/configuration-sources.md).
 
 ### [**ManualFeedSource**](https://github.com/vostok/configuration.sources/blob/master/Vostok.Configuration.Sources/Manual/ManualFeedSourceOfT.cs)
 
@@ -12,7 +12,7 @@ _For in-memory sources or sources that can update an in-memory one from a remote
 class MySource : ManualFeedSource<string>
 {
     public MySource()
-        : base(Parse) {}
+        : base(Parse) { }
 
     private static ISettingsNode Parse(string input) { ... }
 }
@@ -22,7 +22,7 @@ var source = new MySource();
 source.Push("input1");
 source.Push("input2");
 
-// Push method can be used by a internal periodical update routine.
+// Push method can be used by an internal periodical/event-based update routine.
 ```
 
 ### [FileSource](https://github.com/vostok/configuration.sources/blob/master/Vostok.Configuration.Sources/File/FileSource.cs)
@@ -33,7 +33,7 @@ _For sources based on local files. Includes automatic reload on file updates._
 class MyFileSource : FileSource
 {
     public MyFileSource(string filePath)
-        : base(new FileSourceSettings(filePath), Parse) {}
+        : base(new FileSourceSettings(filePath), Parse) { }
         
     private static ISettingsNode Parse(string input) { ... }
 }
