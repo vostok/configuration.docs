@@ -5,7 +5,7 @@
 [**JsonStringSource**](https://github.com/vostok/configuration.sources.json/blob/master/Vostok.Configuration.Sources.Json/JsonStringSource.cs) parses well-formed JSON documents from in-memory strings and supports manual external updates:
 
 ```text
-var source = new YamlStringSource("<json content>");
+var source = new JsonStringSource("<json content>");
 
 ​source.Push("<json content>") // update with new content
 ```
