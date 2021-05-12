@@ -62,5 +62,6 @@
   * [Create custom sources](advanced-scenarios/create-custom-sources.md)
   * [Apply custom validators](advanced-scenarios/apply-custom-validators.md)
   * [Apply custom binders](advanced-scenarios/apply-custom-binders.md)
+  * [Apply source data to existing object](advanced-scenarios/apply-source-data-to-existing-object.md)
   * [Print contents of a source](advanced-scenarios/print-contents-of-a-source.md)
 
