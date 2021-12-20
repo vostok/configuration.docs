@@ -33,7 +33,7 @@ By default all fields and properties are treated as optional: they are just left
 
 ### Model requirements
 
-Model classes must either have a parameterless constructor, a constructor with a single parameter, or have an `OmitConstructorsAttribute` (which allows [creating an uninitialized object](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatterservices.getuninitializedobject?ranMID=46131\&ranEAID=a1LgFw09t88\&ranSiteID=a1LgFw09t88-oUFyy.o\_THf6OiyResJ3Bw\&epi=a1LgFw09t88-oUFyy.o\_THf6OiyResJ3Bw\&irgwc=1\&OCID=AID2200057\_aff\_7806\_1243925\&tduid=\(ir\_\_3wxkgkultckf6myncfcmg0dpp22xopptskqxzupj00\)\(7806\)\(1243925\)\(a1LgFw09t88-oUFyy.o\_THf6OiyResJ3Bw\)\(\)\&irclickid=\_3wxkgkultckf6myncfcmg0dpp22xopptskqxzupj00\&view=net-6.0), therefore, no default parameters are present).
+Model classes must either have a parameterless constructor, a constructor with a single parameter, or have an `OmitConstructorsAttribute` (which allows [creating an uninitialized object](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatterservices.getuninitializedobject), therefore, no default parameters are present).
 
 ### Binder requirements
 
