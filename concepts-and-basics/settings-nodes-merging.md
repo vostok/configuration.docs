@@ -6,16 +6,16 @@ Its primary use is to [combine configuration sources](../basic-scenarios/combine
 
 ### API
 
-Each node type implements a `Merge` method that accept another node \(`right` in our terms\) and an instance of merge options with following properties:
+Each node type implements a `Merge` method that accept another node (`right` in our terms) and an instance of merge options with following properties:
 
-| Property | Values | Description |
-| :--- | :--- | :--- |
-| `ObjectMergeStyle` | `Deep`, `Shallow` | Type of the merge procedure performed on [object nodes](settings-nodes/object-nodes.md). `Deep` is the default style. |
-| `ArrayMergeStyle` | `Replace`, `Concat`, `Union`, `PerElement` | Type of the merge procedure performed on [array nodes](settings-nodes/array-nodes.md). `Replace` is the default style. |
+| Property           | Values                                     | Description                                                                                                            |
+| ------------------ | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `ObjectMergeStyle` | `Deep`, `Shallow`                          | Type of the merge procedure performed on [object nodes](settings-nodes/object-nodes.md). `Deep` is the default style.  |
+| `ArrayMergeStyle`  | `Replace`, `Concat`, `Union`, `PerElement` | Type of the merge procedure performed on [array nodes](settings-nodes/array-nodes.md). `Replace` is the default style. |
 
 [SettingsNodeMerger](https://github.com/vostok/configuration.abstractions/blob/master/Vostok.Configuration.Abstractions/SettingsTree/SettingsNodeMerger.cs) is a handy public helper used to merge arbitrary nodes that handles nulls:
 
-```text
+```
 var result = SettingsNodeMerger.Merge(left, right, SettingsMergeOptions.Default);
 ```
 
@@ -37,25 +37,25 @@ Right node always wins: `left value + right value --> right value`.
 
 ### Merging two [array nodes](settings-nodes/array-nodes.md)
 
-**Replace** style \(default\) ****always preserves the right array:
+**Replace** style (default) **** always preserves the right array:
 
 `left array + right array --> right array`.
 
-**Concat** style ****produces an array containing elements from both arrays. All elements from the left array, then all elements from the second one, preserving order inside arrays.
+**Concat** style **** produces an array containing elements from both arrays. All elements from the left array, then all elements from the second one, preserving order inside arrays.
 
 `[1, 2] + [2, 3] --> [1, 2, 2, 3]`
 
-**Union** style ****produces an array containing unique items from both arrays. The order is the same to **Concat** style.
+**Union** style **** produces an array containing unique items from both arrays. The order is the same to **Concat** style.
 
 `[1, 2, 3] + [2, 3, 4] --> [1, 2, 3, 4]`
 
-**Per element** style ****produces an array containing items obtained by merging corresponding items \(by index\) from both arrays. If merged arrays have different children count, the "tail" of the longer array is preserved as-is.
+**Per element** style **** produces an array containing items obtained by merging corresponding items (by index) from both arrays. If merged arrays have different children count, the "tail" of the longer array is preserved as-is.
 
 `[1, 2, 6] + [4, 5] --> [4, 5, 6]`
 
 ### Merging two [object nodes](settings-nodes/object-nodes.md)
 
-**Deep** style \(default\) produces an object with union of the children from both nodes, then merges children with same names recursively.
+**Deep** style (default) produces an object with union of the children from both nodes, then merges children with same names recursively.
 
 `{A:1} + {B:2} --> {A:1, B:2}`
 
@@ -69,7 +69,10 @@ Right node always wins: `left value + right value --> right value`.
 
 ### Related pages
 
-{% page-ref page="settings-nodes/" %}
+{% content-ref url="settings-nodes/" %}
+[settings-nodes](settings-nodes/)
+{% endcontent-ref %}
 
-{% page-ref page="../basic-scenarios/combine-sources.md" %}
-
+{% content-ref url="../basic-scenarios/combine-sources.md" %}
+[combine-sources.md](../basic-scenarios/combine-sources.md)
+{% endcontent-ref %}
